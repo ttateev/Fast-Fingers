@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Delicious+Handrawn&family=Inter&family=Lora&family=M+PLUS+Rounded+1c:wght@500&family=Nunito+Sans:ital,wght@0,400;0,600;0,700;1,900&display=swap">
+
+  <script src="https://kit.fontawesome.com/fffd17f093.js" crossorigin="anonymous"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Fuzzy+Bubbles&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="keyboard.css">
+  <link rel="stylesheet" href="game.css">
+  <link rel="stylesheet" href="setting.css">
+  <title>Document</title>
+</head>
+
+<body>
+  <section class="intro" id="intro">
+    <section class="balloons-conatiner" id="balloons-container">
+      <div class="balloon yellow"></div>
+      <div class="balloon blue"></div>
+      <div class="balloon purple"></div>
+      <div class="balloon red"></div>
+      <div class="balloon cyan"></div>
+      <!-- infinite-->
+      <div class="balloon pink"></div>
+      <div class="balloon orange"></div>
+      <div class="balloon blue"></div>
+      <div class="balloon yellow"></div>
+      <div class="balloon purple"></div>
+      <div class="balloon green"></div>
+      <div class="balloon cyan"></div>
+      <div class="balloon red"></div>
+    </section>
+    <div class="menu">
+      <h1>FastFingers</h1>
+      <button id="play">Play</button>
+      <button id="learn">Learn</button>
+      <button id="options">Settings</button>
+    </div>
+  </section>
+  <div id="count-down" style="display: none">
+    <h1 id="start-count">3</h1>
+  </div>
+  <section class="game" id="game" style="display: none">
+    <div class="game">
+      <div class="game-part">
+        <header>
+          <div class="your-score">
+            <p>Your&nbsp;Score</p>
+            <p>
+              <i class="fa-solid fa-diamond"></i>
+              <span class="score" id="score">0</span>
+            </p>
+          </div>
+          <div class="higher-score">
+            <p>High&nbsp;Score</p>
+            <p>
+              <i class="fa-solid fa-diamond"></i>
+              <span class="high-score" id="high-score">06</span>
+            </p>
+          </div>
+        </header>
+
+        <div class="word-div" onmousedown="return false" onselectstart="return false">
+          <p class="info-text" id="info-text">AAAAA</p>
+        </div>
+
+        <div class="input-box">
+          <input id="input-area" type="text" placeholder="Start typing..." />
+        </div>
+        <!-- onpaste="return false;" ondrop="return false;" autocomplete="off" -->
+      </div>
+      <div class="time-div">
+        <div class="time-bar-div">
+          <span class="time-bar"></span>
+        </div>
+        <p><span class="time" id="time">5</span></p>
+      </div>
+    </div>
+    <button id="gameBack" class="gameBack">Back</button>
+
+  </section>
+
+  <section class="learningPart" id="learningPart" style="display: none">
+    <h1 class="learn-text">Make your fingers fast</h1>
+
+    <div class="keyboard" id="keyboard">
+      <!-- <h3>Train your fingers</h3>  -->
+      <ul class="row row-0">
+        <li class="pinky1" id="esc">՝</li>
+        <li class="pinky1" id="Digit1">Է</li>
+        <li class="ring1" id="Digit2">Թ</li>
+        <li class="middle1" id="Digit3">Փ</li>
+        <li class="pointer1st" id="Digit4">Ձ</li>
+        <li class="pointer1st" id="Digit5">Ջ</li>
+        <li class="pointer2nd" id="Digit6">ւ</li>
+        <li class="pointer2nd" id="Digit7">և</li>
+        <li class="middle2" id="Digit8">Ր</li>
+        <li class="ring2" id="Digit9">Չ</li>
+        <li class="pinky2" id="Digit0">Ճ</li>
+        <li class="pinky2" id="Minus">-</li>
+        <li class="pinky2" id="Equal">Ժ</li>
+        <li class="pinky2" id="back">DELETE</li>
+      </ul>
+      <ul class="row row-1">
+        <li class="pinky1" id="tab">TAB</li>
+        <li class="pinky1" id="KeyQ">Ք</li>
+        <li class="ring1" id="KeyW">Ո</li>
+        <li class="middle1" id="KeyE">Ե</li>
+        <li class="pointer1st" id="KeyR">Ռ</li>
+        <li class="pointer1st" id="KeyT">Տ</li>
+        <li class="pointer2nd" id="KeyY">Ը</li>
+        <li class="pointer2nd" id="KeyU">ւ</li>
+        <li class="middle2" id="KeyI">Ի</li>
+        <li class="ring2" id="KeyO">Օ</li>
+        <li class="pinky2" id="KeyP">Պ</li>
+        <li class="pinky2" id="BracketLeft">Խ</li>
+        <li class="pinky2" id="BracketRight">Ծ</li>
+        <li class="pinky2">՚</li>
+      </ul>
+      <ul class="row row-2">
+        <li class="pinky1" id="caps">CAPS</li>
+        <li class="pinky1" id="KeyA">Ա</li>
+        <li class="ring1" id="KeyS">Ս</li>
+        <li class="middle1" id="KeyD">Դ</li>
+        <li class="pointer1st" id="KeyF">Ֆ</li>
+        <li class="pointer1st" id="KeyG">Գ</li>
+        <li class="pointer2nd" id="KeyH">Հ</li>
+        <li class="pointer2nd" id="KeyJ">Յ</li>
+        <li class="middle2" id="KeyK">Կ</li>
+        <li class="ring2" id="KeyL">Լ</li>
+        <li class="pinky2" id=";">;</li>
+        <li class="pinky2" id="Quote">Շ</li>
+        <li class="pinky2" id="enter">RETURN</li>
+      </ul>
+      <ul class="row row-3">
+        <li class="pinky1" id="left-shift">SHIFT</li>
+        <li class="pinky1" id="KeyZ">Զ</li>
+        <li class="ring1" id="KeyX">Ղ</li>
+        <li class="middle1" id="KeyC">Ց</li>
+        <li class="pointer1st" id="KeyV">Վ</li>
+        <li class="pointer1st" id="KeyB">Բ</li>
+        <li class="pointer2nd" id="KeyN">Ն</li>
+        <li class="pointer2nd" id="KeyM">Մ</li>
+        <li class="middle2" id=",">,</li>
+        <li class="ring2" id=".">:</li>
+        <li class="pinky2" id="/">/</li>
+        <li class="pinky2" id="right-shift">SHIFT</li>
+      </ul>
+      <div class="hands" id="hands">
+        <img class="left" src="./images/myfingers.png" alt="leftHand">
+        <!-- <img class="right" src="./images/rightHand.png" alt="rightHand"> -->
+      </div>
+      <!-- <img id="figure-jumping" src="./assets/img/fingers.png"> -->
+    </div>
+    <button id="backButton" class="learnBack">Back</button>
+  </section>
+  <section id="settings" style="display: none">
+    <div class="menu">
+      <h1 class="settingsTitle">Settings</h1>
+      <div class="container2">
+        <label class="switch2">
+          <span class="sound_label" id="sound_label">Sound:</span>
+          <input type="checkbox" class="hidden" id="audio_setting2" onclick="audioPlayer()">
+          <div class="slider"></div>
+        </label>
+      </div>
+
+      <button id="setBack" class="setBack">Back</button>
+    </div>
+  </section>
+  <section id="gameOver" style="display: none">
+    <div class="menu">
+      <h1>You lose!</h1>
+      <button id="playAgain">Play again</button>
+      <button id="menu">Menu</button>
+    </div>
+  </section>
+
+  <script src="./data/letters.js"></script>
+  <script src="./data/words.js"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>
